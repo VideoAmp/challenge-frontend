@@ -1,0 +1,101 @@
+<h2>Global Filter</h2>
+
+<div id="majorContainer">
+    <div class="filterContainer">
+        <h3>Desktop Browsers</h3>
+        <ul>
+            <li>
+                <input type="checkbox" ng-checked="vm.apiParams.browser.hasOwnProperty('chrome')" ng-click="vm.toggleBrowser('chrome')">
+                <span>Chrome</span>
+            </li>
+            <li>
+                <input type="checkbox" ng-checked="vm.apiParams.browser.hasOwnProperty('ie')" ng-click="vm.toggleBrowser('ie')">
+                <span>Internet Explorer</span>
+            </li>
+            <li>
+                <input type="checkbox" ng-checked="vm.apiParams.browser.hasOwnProperty('safari')" ng-click="vm.toggleBrowser('safari')">
+                <span>Safari</span>
+            </li>
+            <li>
+                <input type="checkbox" ng-checked="vm.apiParams.browser.hasOwnProperty('firefox')" ng-click="vm.toggleBrowser('firefox')">
+                <span>Firefox</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="filterContainer">
+        <h3>Mobile Browsers</h3>
+        <ul>
+            <li>
+                <input type="checkbox" ng-checked="vm.apiParams.browser.hasOwnProperty('chrome-mobile')" ng-click="vm.toggleBrowser('chrome-mobile')">
+                <span>Chrome</span>
+            </li>
+            <li>
+                <input type="checkbox" ng-checked="vm.apiParams.browser.hasOwnProperty('androidwebkit')" ng-click="vm.toggleBrowser('androidwebkit')">
+                <span>Android Webkit</span>
+            </li>
+            <li>
+                <input type="checkbox" ng-checked="vm.apiParams.browser.hasOwnProperty('mobile-safari')" ng-click="vm.toggleBrowser('mobile-safari')">
+                <span>Safari</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="filterContainer">
+        <h3>Metrics</h3>
+        <p>
+            <input type="checkbox">
+            <span>Impressions</span>
+        </p>
+        <p>
+            <input type="checkbox">
+            <span>Click Through Rate</span>
+        </p>
+        <p>
+            <input type="checkbox">
+            <span>Clicks</span>
+        </p>
+        <p>
+            <input type="checkbox">
+            <span>25% Rate</span>
+        </p>
+        <p>
+            <input type="checkbox">
+            <span>50% Rate</span>
+        </p>
+        <p>
+            <input type="checkbox">
+            <span>75% Rate</span>
+        </p>
+        <p>
+            <input type="checkbox">
+            <span>Completion Rate</span>
+        </p>
+        <p>
+            <input type="checkbox">
+            <span>First Quartile</span>
+        </p>
+        <p>
+            <input type="checkbox">
+            <span>Midpoint</span>
+        </p>
+        <p>
+            <input type="checkbox">
+            <span>Third Quartile</span>
+        </p>
+        <p>
+            <input type="checkbox">
+            <span>Completions</span>
+        </p>
+        <li>
+            {{vm.apiParams.browser}}
+        </li>
+    </div>
+</div>
+<p>
+    <ul>
+        <li ng-repeat="data in vm.data">
+            {{data}}
+        </li>
+    </ul>
+</p>
